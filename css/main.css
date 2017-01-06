@@ -1,0 +1,230 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+.navbar {
+    
+    transition: all 0.1s ease-out;
+    padding: 10px 50px 10px 50px;
+  	color: white;
+
+}
+
+
+.navbar-brand{
+	font-family: 'Josefin Slab', serif;
+	font-size: 1.5em;
+}
+
+.navbar.scrolled {
+    background: #86D5CF;
+}
+
+.navbar-right{
+	font-family: 'Raleway', sans-serif;
+
+}
+
+ul.nav a:hover { 
+	font-weight: bold;
+	background-color: rgba(0,0,0,.0);
+}
+
+/* whole page fade-in*/
+body {
+    opacity: 1;
+    transition: 1s opacity;
+
+
+}
+body.fade-out {
+    opacity: 0;
+    transition: none;
+} 
+
+
+/* ==========================================================================
+   General
+   ========================================================================== */
+
+body{
+	padding-top: 0px;
+}
+
+h1 {
+	font-family: 'Josefin Slab', serif;
+	font-size: 80px;
+	margin-top: 40px;
+	font-weight: bold;
+	color: rgba(0,0,0,.7);
+
+}
+
+h2{
+	margin-top: 20px;
+}
+
+p{
+	margin: 30px;
+	font-size: 16px;
+}
+
+h2, h3, p, span, .button {
+	font-family: 'Raleway', sans-serif;
+}
+
+.content {
+	padding-bottom: 0px;
+	padding-top: 50px;
+}
+
+
+
+
+.button{
+	border-radius: 3px;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    box-shadow: 2px 2px 5px #888888;
+}
+
+.primary-button{
+
+ margin: 50px;
+	background-color: white !important;
+	color: #86D5CF;
+}
+
+.headshot{
+	height: auto;
+	border-radius: 50%;
+	width: 150px;
+}
+
+.details{
+	background-color: rgba(255,255,255,.7);
+	padding: 10px 0px;
+	margin-top: 20px;
+	border-radius: 5px;
+
+}
+
+/* ==========================================================================
+   Cover Section
+   ========================================================================== */
+
+#photobooth {
+	max-width: 15%;
+	height: auto;
+	border-radius: 100%;
+	display: block;
+	margin-top: 20px;
+}
+
+#heart{
+	width: auto;
+	height: 74px;
+	margin-top: 20px;
+}
+
+#hero {
+	background-image: url("../img/background/title.png");
+	padding-top: 50px;
+	
+	
+}
+
+.watercolor {
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+
+}
+
+#hero h1{
+	font-size: 80px;
+	margin: 20px;
+	font-weight: bold;
+	color: rgba(0,0,0,.7);
+}
+
+#hero h3{
+	color: white;
+	padding-top: 20px;
+}
+
+#clockdiv{
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+}
+
+#clockdiv > div{
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: #337ab7;
+    display: inline-block;
+}
+
+
+
+.smalltext{
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+
+/* ==========================================================================
+   Welcome
+   ========================================================================== */
+
+#welcome img {
+	height: auto;
+	width: 300px;
+	border-radius: 5px;
+	margin-top: 20px;
+}
+
+
+/* ==========================================================================
+   Our Story
+   ========================================================================== */
+
+#story{
+	background-image: url("../img/background/story.png");
+	
+}
+
+#story p{
+	text-align: left;
+}
+
+#wedding{
+	background-image: url("../img/background/wedding.png");
+}
+
+.container{
+	width: 100%;
+}
+
+.center{
+	display: inline-flex;
+}
+
+
+
+
