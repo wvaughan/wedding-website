@@ -1,7 +1,7 @@
 
 
 /* ==========================================================================
-   Author's custom styles
+   Navbar
    ========================================================================== */
 
 
@@ -33,17 +33,6 @@ ul.nav a:hover {
 	background-color: rgba(0,0,0,.0);
 }
 
-/* whole page fade-in*/
-body {
-    opacity: 1;
-    transition: 1s opacity;
-
-
-}
-body.fade-out {
-    opacity: 0;
-    transition: none;
-} 
 
 
 /* ==========================================================================
@@ -52,7 +41,16 @@ body.fade-out {
 
 body{
 	padding-top: 0px;
+	 
+/* whole page fade-in*/
+	opacity: 1;
+    transition: 1s opacity;
 }
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+} 
 
 h1 {
 	font-family: 'Josefin Slab', serif;
@@ -64,7 +62,7 @@ h1 {
 }
 
 h2{
-	margin-top: 20px;
+	margin: 40px 0px 0 0;
 }
 
 p{
@@ -75,13 +73,6 @@ p{
 h2, h3, p, span, .button {
 	font-family: 'Raleway', sans-serif;
 }
-
-.content {
-	padding-bottom: 0px;
-	padding-top: 50px;
-}
-
-
 
 
 .button{
@@ -103,18 +94,36 @@ h2, h3, p, span, .button {
 	color: #86D5CF;
 }
 
-.headshot{
+
+.gif_circle{
 	height: auto;
 	border-radius: 50%;
-	width: 150px;
+	width: 200px;
+	margin-top: 20px;
+}
+
+.cover{
+	object-fit: cover;
+	height: 200px;
 }
 
 .details{
 	background-color: rgba(255,255,255,.7);
 	padding: 10px 0px;
-	margin-top: 20px;
+	margin: 20px 0px;
 	border-radius: 5px;
 
+}
+
+.leftalign {
+	text-align: left;
+}
+
+iframe{
+	padding: 10px;
+	background-color: rgba(255,255,255,.7);
+	border-radius: 3px;
+	margin-top: 40px;
 }
 
 /* ==========================================================================
@@ -137,7 +146,7 @@ h2, h3, p, span, .button {
 
 #hero {
 	background-image: url("../img/background/title.png");
-	padding-top: 50px;
+	padding-top: 100px;
 	
 	
 }
@@ -146,6 +155,7 @@ h2, h3, p, span, .button {
 	background-repeat: no-repeat;
 	background-size: cover;
 	text-align: center;
+	padding: 20px 0px;
 
 }
 
@@ -192,11 +202,11 @@ h2, h3, p, span, .button {
    Welcome
    ========================================================================== */
 
-#welcome img {
+.centerimage {
 	height: auto;
-	width: 300px;
+	width: 400px;
 	border-radius: 5px;
-	margin-top: 20px;
+	margin-top: 30px;
 }
 
 
@@ -205,11 +215,11 @@ h2, h3, p, span, .button {
    ========================================================================== */
 
 #story{
-	background-image: url("../img/background/story.png");
+	background-image: url("../img/background/purplestars.png");
 	
 }
 
-#story p{
+#leftalign {
 	text-align: left;
 }
 
@@ -225,6 +235,21 @@ h2, h3, p, span, .button {
 	display: inline-flex;
 }
 
+.timeline p{
+	padding: 0px;
+	margin: 0px;
+}
 
+.timeline {
+	background-color: rgba(255, 255, 255, .7);
+}
 
+#rsvp{
+	background-image: url("../img/background/rsvp.png");
+	color: white;
+}
+
+#rsvp h1{
+	color: white;
+}
 
