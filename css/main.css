@@ -3,12 +3,12 @@
 /* ==========================================================================
    Navbar
    ========================================================================== */
-
+body {overflow-x: hidden;}
 
 .navbar {
     
     transition: all 0.1s ease-out;
-    padding: 10px 50px 10px 50px;
+    padding: 0px 50px;
   	color: white;
 
 }
@@ -20,7 +20,8 @@
 }
 
 .navbar.scrolled {
-    background: #86D5CF;
+    /*background: #86D5CF;*/
+    background: rgba(134, 213, 207, .95);
 }
 
 .navbar-right{
@@ -35,12 +36,13 @@ ul.nav a:hover {
 
 
 
+
 /* ==========================================================================
    General
    ========================================================================== */
 
 body{
-	padding-top: 0px;
+	padding: 0px;
 	 
 /* whole page fade-in*/
 	opacity: 1;
@@ -66,7 +68,7 @@ h2{
 }
 
 p{
-	margin: 30px;
+	margin-top: 30px;
 	font-size: 16px;
 }
 
@@ -74,6 +76,10 @@ h2, h3, p, span, .button {
 	font-family: 'Raleway', sans-serif;
 }
 
+.note{
+	font-size: 11px;
+	margin: 0px;
+}
 
 .button{
 	border-radius: 3px;
@@ -109,7 +115,7 @@ h2, h3, p, span, .button {
 
 .details{
 	background-color: rgba(255,255,255,.7);
-	padding: 10px 0px;
+	padding: 10px 30px;
 	margin: 20px 0px;
 	border-radius: 5px;
 
@@ -144,7 +150,7 @@ iframe{
 	margin-top: 20px;
 }
 
-#hero {
+#hero{
 	background-image: url("../img/background/title.png");
 	padding-top: 100px;
 	
@@ -178,6 +184,7 @@ iframe{
     font-weight: 100;
     text-align: center;
     font-size: 30px;
+    margin-bottom: 20px;
 }
 
 #clockdiv > div{
@@ -202,6 +209,10 @@ iframe{
    Welcome
    ========================================================================== */
 
+#welcome {
+	background-image: url("../img/background/red.png");
+}
+
 .centerimage {
 	height: auto;
 	width: 400px;
@@ -223,16 +234,48 @@ iframe{
 	text-align: left;
 }
 
-#wedding{
-	background-image: url("../img/background/wedding.png");
-}
-
 .container{
 	width: 100%;
 }
 
 .center{
 	display: inline-flex;
+}
+
+#story h1, #story h2{
+	color: white;
+}
+
+/* ==========================================================================
+   Event
+   ========================================================================== */
+#wedding{
+	background-image: url("../img/background/wedding.png");
+}
+
+#wedding img{
+	display: block;
+	width: 60%;
+	height: auto;	
+	border-radius: 5px;
+	margin: 20px;
+
+	filter: url(filters.svg#grayscale);
+  	/* Firefox 3.5+ */
+  	filter: gray;
+  	/* IE6-9 */
+    -webkit-filter: grayscale(1);
+  	/* Google Chrome & Safari 6+ */
+}
+
+#wedding img:hover{
+	filter: none;
+  -webkit-filter: none;
+}
+
+.hotel p{
+	padding: 0px;
+	margin: 0px;
 }
 
 .timeline p{
@@ -242,6 +285,9 @@ iframe{
 
 .timeline {
 	background-color: rgba(255, 255, 255, .7);
+	border-radius: 5px;
+	margin-top: 20px;
+	padding: 0px 20px;
 }
 
 #rsvp{
@@ -253,3 +299,11 @@ iframe{
 	color: white;
 }
 
+footer{
+	background-image: url("../img/background/title.png");
+	padding: 30px;
+}
+
+footer p{
+	margin: 0;
+}

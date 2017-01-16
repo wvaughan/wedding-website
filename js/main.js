@@ -1,3 +1,12 @@
+/* ZARA AND WILL SIZE CHANGE
+
+$(window).on("scroll", function() {
+    var s = Math.min(10, $(document).scrollTop()) - 100;
+    $("#heart").width(s).height(s);
+}); */
+
+// NAVBAR SCROLL EFFECT
+
 function checkScroll(){
     var startY = $('.navbar').height(); //The point where the navbar changes in px
 
@@ -14,6 +23,7 @@ if($('.navbar').length > 0){
     });
 }
 
+// COUNTDOWN TIMER
 
 function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());
@@ -57,6 +67,25 @@ function initializeClock(id, endtime) {
 var deadline =  'September 16 2017 17:30:00 GMT-0400';
 initializeClock('clockdiv', deadline);
 
+// PAGE FADE
+
 $(function() {
     $('body').removeClass('fade-out');
+});
+
+// SMOOTH SCROLL TO SINGLE PAGE LINKS
+
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
 });
