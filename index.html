@@ -4,6 +4,7 @@
 [] Make nav links select based on scroll position
 [] Fix mobile navbar
 [] Fix scroll position so that navbar doesn't overlap content
+[] Fade-in background colors for each section before images load
 [] test out split nav
 [] explore paralax scrolling effects
 [] explore making Zarilliam appear on scroll above Zara <3 Will
@@ -20,7 +21,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Zara and Will Are Getting Married</title>
   <meta name="description" content="Zara and Will are getting married on September 16, 2017 at the Eric Carle Museum." />
-  <meta name="keywords" content="fishkin, vaughan, wedding" />
+  <meta name="keywords" content="fishkin, vaughan, wedding, will, zara, 2017, amherst" />
   <meta name="author" content="Will Vaughan" />
   <meta property="og:image" content="http://www.zarilliam.com/img/zwsinging.gif" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,6 +37,17 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
 
+  <!-- AddEvent -->
+  <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+  <!-- AddEvent Settings -->
+<script type="text/javascript">
+window.addeventasync = function(){
+    addeventatc.settings({
+        license    : "alYrqgSIyzZXoqVLemXT25076",
+        css        : true
+    });
+};
+</script>
   <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -112,7 +124,18 @@
                 </div>
                 <br>
                 <!-- <button class="primary-button button" type="button">RSVP Now</button> -->
-
+                <div title="Add to Calendar" class="addeventatc">
+                  Add to Calendar
+                  <span class="start">09/16/2017 05:00 PM</span>
+                  <span class="end">09/16/2017 11:00 AM</span>
+                  <span class="timezone">America/New_York</span>
+                  <span class="title">Zara and Will Get Married</span>
+                  <span class="location">125 W Bay Rd, Amherst, MA 01002</span>
+                  <span class="alarm_reminder">1440</span>
+                  <span class="all_day_event">false</span>
+                  <span class="date_format">MM/DD/YYYY</span>
+                  <span class="client">alYrqgSIyzZXoqVLemXT25076</span>
+               </div>
 
 
               </div>
@@ -169,9 +192,9 @@
                     <div class="row">
                       <div class="col-md-2"></div>
                       <div class="col-md-8 details">
-                        <p class="leftalign">Will’s greatest joys in life include high-speed Internet, low-fidelity design mocks, Bill Belichick’s salty demeanor, whoopie pies, traveling, and definitely not vertical videos. He grew up in Lynnfield, MA with the legendary Bill and Sharon, and a howlin’ good succession of beagles, Mandy, Misty, and Brandy. He can trace his academic success to Huckleberry Elementary School (not Summer Street), where the precocious youngster dove right into 20,000 Leagues Under the Sea, while Zara was still stuck in the Magic Tree House series.</p>
+                        <p class="leftalign">Will’s greatest joys in life include high-speed Internet, low-fidelity design mocks, Bill Belichick’s salty demeanor, whoopie pies, traveling, and definitely not vertical videos. He grew up in Lynnfield, MA with the legendary Bill and Sharon, and a howlin’ good succession of beagles, Mandy, Misty, and Brandy. He can trace his academic success to Huckleberry Elementary School (not Summer Street), where the precocious youngster dove right into <cite>20,000 Leagues Under the Sea</cite>, while Zara was still stuck in the <cite>Magic Tree House series</cite>.</p>
 
-                        <p class="leftalign">After graduating valedictorian of Lynnfield High School, he also went on to Tufts University, where he studied the totally real field of Engineering Psychology, and studied abroad at the Universidad de Alcalá. He now works as a user experience designer of robots, which he assures everyone will not be taking over the world (yet).</p>
+                        <p class="leftalign">After graduating valedictorian of Lynnfield High School, he also went on to Tufts University, where he majored in the totally real field of Engineering Psychology, and studied abroad at the Universidad de Alcalá. He now works as a user experience designer of robots, which he assures everyone will not be taking over the world (yet).</p>
 
                         <div class="col-md-2"></div>
                       </div>
@@ -186,7 +209,7 @@
                     <h2>Their Powers Combined</h2>
                     <img src="img/applepicking2.gif" class="centerimage">
                     <div class="details">
-                      <p class="leftalign">It was love at second sight. Will and Zara met at Tufts, where they both carried on learning stuff and not dating. Fate or geographic probability then threw them together again at athenahealth, where Zara recognized him, developed a crush, and kept giving him her number until, tech be praised, he finally put it in his phone. They shared a few wonderful years with family and friends on the east coast and then up and left for California, where they're currently enjoying the lack of snow and ice.</p>
+                      <p class="leftalign">It was love at second sight. Will and Zara met at Tufts, where they both carried on learning stuff and not dating. Fate or geographic probability then threw them together again at athenahealth, where Zara recognized him, developed a crush, and kept giving him her number until, tech be praised, he finally put it in his phone. They shared some wonderful years in Greater Boston, then in September, shipped out to California where they're currently enjoying the lack of snow and ice.</p>
                     </div>
                   </div>
                   <div class="col-md-3"></div>
@@ -201,16 +224,23 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-12">
-                <h2>Eric Carle Museum of Picture Book Art</h2>
-              </div>
-            </div>
-
-            <div class="row">
               <div class="col-md-2"></div>
-              <div class="col-md-4">
-                <div class="details">
-                  <p class="leftalign">Both the ceremony and reception will take place at the Eric Carle Museum of Picture Book Art in Amherst, MA - on the grounds of scenic Hampshire College.
+              <div class="col-md-8 details">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2>Eric Carle Museum of Picture Book Art</h2>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-2"></div>
+                  <div class="col-md-8">
+                    <img id="museum" src="http://www.carlemuseum.org/sites/default/files/styles/footer_image/public/the-eric-carle-museum-of-picture-book-art.jpg?itok=Qj-qyN8T">
+                  </div>
+                  <div class="col-md-2"></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <p class="leftalign">Both the ceremony and reception will take place at the Eric Carle Museum of Picture Book Art in Amherst, MA, on the grounds of scenic Hampshire College. Why this museum? Zara fell in love with Eric Carle’s books as a child, and we think we could all use some of that colorful magic in our adult lives.
                 </p>
 
                 <p class="leftalign">
@@ -222,14 +252,18 @@
                 <p class="leftalign">
                   <b>Weather:</b> The ceremony will be outside weather-permitting
                 </p>
+                <p class="leftalign"><a href="http://www.carlemuseum.org/">Learn about the museum</a></p>
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11800.036711414497!2d-72.533142!3d42.321003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc752198821ca6ab7!2sThe+Eric+Carle+Museum+of+Picture+Book+Art!5e0!3m2!1sen!2sus!4v1483933058476" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                  </div>
                 </div>
-                
-              </div>
-              <div class="col-md-4">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11800.036711414497!2d-72.533142!3d42.321003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc752198821ca6ab7!2sThe+Eric+Carle+Museum+of+Picture+Book+Art!5e0!3m2!1sen!2sus!4v1483933058476" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
               </div>
               <div class="col-md-2"></div>
             </div>
+
+           
 
             <div class="row">
               <div class="col-md-3"></div>
@@ -258,7 +292,7 @@
                 <p class="note">Please note, the Courtyard requires a two night minimum.</p>
               </div>
             </div>
-             <div class="col-md-4">
+             <div class="hotel col-md-4">
                <a href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=Fishkin/Vaughan%20Wedding%5Ebdlhd%60FVWFVWA%7CFVWFVWB%60229.00%60USD%60false%604%609/15/17%609/17/17%608/16/17&app=resvlink&stop_mobi=yes" target="_blank"><img src="https://images.trvl-media.com/hotels/2000000/1660000/1659000/1658945/1658945_31_y.jpg"></a>
              </div>
              
@@ -392,7 +426,17 @@
   
 
 <footer>
-    <p>&copy; Will Vaughan and Zara Fishkin 2017</p>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4" align="center">
+        
+        <p>&copy; Will Vaughan and Zara Fishkin 2017</p>
+        <img src="img/sasquatch.gif">
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+    
+
   </footer>
 <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
